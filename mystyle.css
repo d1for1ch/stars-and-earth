@@ -31,64 +31,6 @@ body {
 /* Убираем обводку для элементов внутри списка */
 .object-list {
     border: none; /* Убираем обводку у всей обертки списка */
-    
-}
-
-/* Навигационное меню */
-ul.navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    transition: background-color 0.3s ease;
-}
-
-ul.navbar li {
-    padding: 10px 20px;
-}
-
-/* Стиль для ссылок в меню */
-ul.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    position: relative;
-    padding: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Плавное изменение цвета текста при наведении */
-ul.navbar a:hover {
-    color: #ffcc00;
-}
-
-/* Эффект подчеркивания при наведении */
-ul.navbar a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #ffcc00;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-/* При наведении подчеркивание плавно появляется */
-ul.navbar a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Плавное увеличение кнопки на 10% */
-ul.navbar a:hover {
-    transform: scale(1.1);
 }
 
 /* Заголовок */
@@ -114,11 +56,6 @@ h1 {
     text-align: center;
     font-size: 2rem;
     color: #ffcc00;
-}
-
-.object-list ul {
-    list-style: none;
-    padding: 0;
 }
 
 .object-list li {
@@ -168,27 +105,35 @@ h1 {
 }
 
 /* Кнопка "Назад" внизу слева */
-.floating-back-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: linear-gradient(145deg, #ff9800, #ff5722);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.2s;
-    z-index: 1000;
+.floating-back {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px; /* добавляем, чтобы можно было расположить элементы по краям */
+  display: flex;
+  justify-content: space-between; /* ← кнопки расходятся влево и вправо */
+  z-index: 1000;
 }
 
-.floating-back-button:hover {
-    background: linear-gradient(145deg, #ffc107, #ff7043);
-    transform: scale(1.05);
+/* Общий стиль для кнопок */
+.back-button { 
+  display: inline-block;
+  background-color: transparent;
+  color: #ffcc00;
+  padding: 10px 18px;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+/* Эффект при наведении */
+.back-button:hover {
+  transform: scale(1.05);
+}
+
 
 
 /* Стили для адреса */
