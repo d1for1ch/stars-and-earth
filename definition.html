@@ -8,16 +8,16 @@
 </head>
 <body>
 
-<!-- Меню -->
-<ul class="">
-  <li><a href="list of objects.html">Назад</a></li>
-</ul>
 
+<div class="floating-back"> 
+  <a href="list of objects.html" class="back-button">Назад</a>
+<!--?????????????---->
+</div>
 <!-- Заголовок -->
 <h1>Сириус — Самая яркая звезда ночного неба</h1>
 
 <!-- Контейнер с двумя блоками -->
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px;">
+<div style="flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px;">
 
   <!-- Левый блок: История -->
   <div class="object-list" style="flex: 1 1 45%;">
@@ -50,8 +50,11 @@
 
   <!-- Правый блок: Физические характеристики -->
   <div class="object-list" style="flex: 1 1 45%;">
+    <div>
+        <h2>Характеристики</h2>
+    </div>
     <div class="parameter">
-        <h3>Открыватель:</h3> <p>Известна с древности</p>
+        <h3>Открыватель:</h3> <p>известна с древности</p>
     </div>
     <div class="parameter">
         <h3>Тип:</h3> <p>двойная звезда</p>
@@ -140,5 +143,4 @@
 
 </body>
 </html>
-
 
